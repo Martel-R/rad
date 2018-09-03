@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,15 +34,23 @@ public class RegistroActivity extends AppCompatActivity {
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String ref = myRef.push().toString();
-                myRef.child(ref).child("data").setValue(etData.getText().toString());
-                myRef.child(ref).child("funcionario").setValue("");
-                myRef.child(ref).child("hora_exame").setValue(etHora.getText().toString());
-                myRef.child(ref).child("nome").setValue(tietNome.getText().toString());
-                myRef.child(ref).child("idade").setValue(etIdade.getText().toString());
-                myRef.child(ref).child("procedimento").setValue(tietProc.getText().toString());
-                myRef.child(ref).child("qtd_peliculas").setValue(etQtd.getText().toString());
-                myRef.child(ref).child("obs").setValue(tietObs.getText().toString());
+                String ref = myRef.push().getKey().toString();
+                String nome = tietNome.getText().toString();
+                String idade = etIdade.getText().toString();
+                String hora = etHora.getText().toString();
+                String data = etData.getText().toString();
+                String proc = tietProc.getText().toString();
+                String obs = tietObs.getText().toString();
+                String qtd = etQtd.getText().toString();
+                Log.d("Ref", ref);
+                myRef.child(ref).child("funcionario").setValue("Enrique");
+                myRef.child(ref).child("data").setValue(data);
+                myRef.child(ref).child("hora_exame").setValue(hora);
+                myRef.child(ref).child("nome").setValue(nome);
+                myRef.child(ref).child("idade").setValue(idade);
+                myRef.child(ref).child("procedimento").setValue(proc);
+                myRef.child(ref).child("qtd_peliculas").setValue(qtd);
+                myRef.child(ref).child("obs").setValue(obs);
 
                 Intent i = new Intent(RegistroActivity.this, MainActivity.class);
                 startActivity(i);
