@@ -42,7 +42,6 @@ public class RegistroActivity extends AppCompatActivity {
                 String proc = tietProc.getText().toString();
                 String obs = tietObs.getText().toString();
                 String qtd = etQtd.getText().toString();
-                Log.d("Ref", ref);
                 myRef.child(ref).child("funcionario").setValue("Enrique");
                 myRef.child(ref).child("data").setValue(data);
                 myRef.child(ref).child("hora_exame").setValue(hora);
