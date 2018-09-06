@@ -1,43 +1,35 @@
 {
   "project_info": {
-    "project_number": "1015969707431",
-    "firebase_url": "https://unimedradiologia.firebaseio.com",
-    "project_id": "unimedradiologia",
-    "storage_bucket": "unimedradiologia.appspot.com"
+    "project_number": "285416281032",
+    "firebase_url": "https://martel-r.firebaseio.com",
+    "project_id": "martel-r",
+    "storage_bucket": "martel-r.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1015969707431:android:50e586ed1a28ae45",
+        "mobilesdk_app_id": "1:285416281032:android:fcfef757a832647b",
         "android_client_info": {
-          "package_name": "com.martel.rad"
+          "package_name": "com.google.firebase.quickstart.database"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1015969707431-cl2esv77vvs6o84c4mfq5tosl2c4002a.apps.googleusercontent.com",
+          "client_id": "285416281032-k791ov10ba5dnfamgk0q6j6803q1mqgq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.martel.rad",
-            "certificate_hash": "f1b930f8aa03d8f72450e6a5564fe9c672eac5ae"
-          }
-        },
-        {
-          "client_id": "1015969707431-fe3362laf73ll9o9sdmaeaomgp6djrlr.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.martel.rad",
+            "package_name": "com.google.firebase.quickstart.database",
             "certificate_hash": "b105bd9c2a70f3dbc31b62fd799b508e69cba3de"
           }
         },
         {
-          "client_id": "1015969707431-lfns7qigc7b8c9e7hohi3hsitphhogri.apps.googleusercontent.com",
+          "client_id": "285416281032-37ekqdt75mmfn8ark7oqvqlqqjfef4tl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAm-IHG4_TB40auDordh0rLQJvutn7Q80w"
+          "current_key": "AIzaSyDQbTgQummuVl-t2IVIkaMZcg_4r5Cgqyo"
         }
       ],
       "services": {
@@ -48,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "1015969707431-lfns7qigc7b8c9e7hohi3hsitphhogri.apps.googleusercontent.com",
+              "client_id": "285416281032-37ekqdt75mmfn8ark7oqvqlqqjfef4tl.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -60,28 +52,28 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1015969707431:android:b95c8c96f8dfffc4",
+        "mobilesdk_app_id": "1:285416281032:android:a806387762327d53",
         "android_client_info": {
-          "package_name": "com.martel.radcontrol"
+          "package_name": "com.google.firebase.quickstart.firebasestorage"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1015969707431-kivn9dad5gf8g4ou5dupvi4kjjiqpdmb.apps.googleusercontent.com",
+          "client_id": "285416281032-at3b55bg3keq696bg4302bkfsmesvrmm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.martel.radcontrol",
-            "certificate_hash": "b105bd9c2a70f3dbc31b62fd799b508e69cba3de"
+            "package_name": "com.google.firebase.quickstart.firebasestorage",
+            "certificate_hash": "f1b930f8aa03d8f72450e6a5564fe9c672eac5ae"
           }
         },
         {
-          "client_id": "1015969707431-lfns7qigc7b8c9e7hohi3hsitphhogri.apps.googleusercontent.com",
+          "client_id": "285416281032-37ekqdt75mmfn8ark7oqvqlqqjfef4tl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAm-IHG4_TB40auDordh0rLQJvutn7Q80w"
+          "current_key": "AIzaSyDQbTgQummuVl-t2IVIkaMZcg_4r5Cgqyo"
         }
       ],
       "services": {
@@ -92,7 +84,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "1015969707431-lfns7qigc7b8c9e7hohi3hsitphhogri.apps.googleusercontent.com",
+              "client_id": "285416281032-37ekqdt75mmfn8ark7oqvqlqqjfef4tl.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -104,28 +96,28 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1015969707431:android:82681562832c939b",
+        "mobilesdk_app_id": "1:285416281032:android:09546560b4505797",
         "android_client_info": {
-          "package_name": "com.martel.unimedradiologia_controledeestoque"
+          "package_name": "com.google.firebase.samples.apps.mlkit"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1015969707431-9hfoueooh4eqbdl96nuq71j5e5quq7vp.apps.googleusercontent.com",
+          "client_id": "285416281032-l47g43b66ubn7jg146k88eaom0sck157.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.martel.unimedradiologia_controledeestoque",
+            "package_name": "com.google.firebase.samples.apps.mlkit",
             "certificate_hash": "f1b930f8aa03d8f72450e6a5564fe9c672eac5ae"
           }
         },
         {
-          "client_id": "1015969707431-lfns7qigc7b8c9e7hohi3hsitphhogri.apps.googleusercontent.com",
+          "client_id": "285416281032-37ekqdt75mmfn8ark7oqvqlqqjfef4tl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAm-IHG4_TB40auDordh0rLQJvutn7Q80w"
+          "current_key": "AIzaSyDQbTgQummuVl-t2IVIkaMZcg_4r5Cgqyo"
         }
       ],
       "services": {
@@ -136,7 +128,51 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "1015969707431-lfns7qigc7b8c9e7hohi3hsitphhogri.apps.googleusercontent.com",
+              "client_id": "285416281032-37ekqdt75mmfn8ark7oqvqlqqjfef4tl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285416281032:android:dbbda7fbc14a1189",
+        "android_client_info": {
+          "package_name": "com.martel.testelista"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285416281032-pcoil6monee7huore8cgpqffbarmpvce.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.martel.testelista",
+            "certificate_hash": "b105bd9c2a70f3dbc31b62fd799b508e69cba3de"
+          }
+        },
+        {
+          "client_id": "285416281032-37ekqdt75mmfn8ark7oqvqlqqjfef4tl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQbTgQummuVl-t2IVIkaMZcg_4r5Cgqyo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285416281032-37ekqdt75mmfn8ark7oqvqlqqjfef4tl.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
