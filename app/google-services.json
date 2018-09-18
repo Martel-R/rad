@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:285416281032:android:fcfef757a832647b",
         "android_client_info": {
-          "package_name": "com.google.firebase.quickstart.database"
+          "package_name": "com.martel"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "285416281032-k791ov10ba5dnfamgk0q6j6803q1mqgq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.google.firebase.quickstart.database",
+            "package_name": "com.martel",
             "certificate_hash": "b105bd9c2a70f3dbc31b62fd799b508e69cba3de"
           }
         },

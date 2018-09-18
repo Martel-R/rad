@@ -1,4 +1,4 @@
-package com.google.firebase.quickstart.database;
+package com.martel;
 
 
 import android.support.test.InstrumentationRegistry;
@@ -79,12 +79,12 @@ public class NewPostTest {
 
         // Enter post title
         ViewInteraction appCompatEditText4 = onView(
-                allOf(withId(R.id.field_title), isDisplayed()));
+                allOf(withId(R.id.field_nome), isDisplayed()));
         appCompatEditText4.perform(replaceText(postTitle));
 
         // Enter post content
         ViewInteraction appCompatEditText5 = onView(
-                allOf(withId(R.id.field_body), isDisplayed()));
+                allOf(withId(R.id.field_proc), isDisplayed()));
         appCompatEditText5.perform(replaceText(postContent));
 
         // Click submit button
