@@ -89,13 +89,13 @@ public class PostDetailActivity extends BaseActivity implements View.OnClickList
                 Post post = dataSnapshot.getValue(Post.class);
                 // [START_EXCLUDE]
                 if (post != null) {
-                    mAuthorView.setText(post.getAuthor());
+                    mAuthorView.setText(post.author);
                 }
                 if (post != null) {
-                    mTitleView.setText(post.getPaciente());
+                    mTitleView.setText(post.paciente);
                 }
                 if (post != null) {
-                    mBodyView.setText(post.getProc());
+                    mBodyView.setText(post.proc);
                 }
 
                 // [END_EXCLUDE]
@@ -162,7 +162,6 @@ public class PostDetailActivity extends BaseActivity implements View.OnClickList
 
                         // Clear the field
                         mCommentField.setText(null);
-                        Log.e("AQUI", "Aqui fica null");
                     }
 
                     @Override

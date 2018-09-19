@@ -14,7 +14,12 @@ public class Post {
     public String author;
     public String paciente;
     public String proc;
-    public String qtd;
+    public String p13x18;
+    public String p18x24;
+    public String p24x30;
+    public String p30x34;
+    public String p35x35;
+    public String p35x43;
     public String idade;
     public String hora;
     public String dataa;
@@ -25,52 +30,22 @@ public class Post {
         // Default constructor required for calls to DataSnapshot.getValue(Post.class)
     }
 
-    public Post(String uid, String author, String nome, String proc, String qtd, String idade, String hora, String data) {
+    public Post(String uid, String author, String paciente, String proc, String p13x18, String p18x24, String p24x30, String p30x34, String p35x35, String p35x43, String idade, String hora, String dataa) {
         this.uid = uid;
         this.author = author;
-        this.paciente = nome;
+        this.paciente = paciente;
         this.proc = proc;
-        this.qtd = qtd;
+        this.p13x18 = p13x18;
+        this.p18x24 = p18x24;
+        this.p24x30 = p24x30;
+        this.p30x34 = p30x34;
+        this.p35x35 = p35x35;
+        this.p35x43 = p35x43;
         this.idade = idade;
         this.hora = hora;
-        this.dataa = data;
+        this.dataa = dataa;
     }
 
-    public String getUid() {
-        return uid;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public String getPaciente() {
-        return paciente;
-    }
-
-    public String getProc() {
-        return proc;
-    }
-
-    public String getQtd() {
-        return qtd;
-    }
-
-    public String getIdade() {
-        return idade;
-    }
-
-    public String getHora() {
-        return hora;
-    }
-
-    public String getDataa() {
-        return dataa;
-    }
-
-    public int getStarCount() {
-        return starCount;
-    }
 
     public Map<String, Boolean> getStars() {
         return stars;
@@ -81,10 +56,15 @@ public class Post {
     public Map<String, Object> toMap() {
         HashMap<String, Object> result = new HashMap<>();
         result.put("uid", uid);
-        result.put("Funcionario", author);
-        result.put("Paciente", paciente);
-        result.put("Procedimento", proc);
-        result.put("Peliculas", qtd);
+        result.put("author", author);
+        result.put("paciente", paciente);
+        result.put("proc", proc);
+        result.put("p13x18", p13x18);
+        result.put("p18x24", p18x24);
+        result.put("p24x30", p24x30);
+        result.put("p30x40", p30x34);
+        result.put("p35x35", p35x35);
+        result.put("p35x43", p35x43);
         result.put("Idade", idade);
         result.put("Hora", hora);
         result.put("Data", dataa);
