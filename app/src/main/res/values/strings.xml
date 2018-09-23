@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Radiologia Control 2</string>
+    <string name="app_name">Radiologia Control</string>
     <string name="action_settings">Configuração</string>
     <string name="menu_login">Log in</string>
     <string name="menu_logout">Log out</string>

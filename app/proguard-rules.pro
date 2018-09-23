@@ -21,10 +21,10 @@
 -keepattributes EnclosingMethod
 -keepattributes InnerClasses
 
--keep class com.martel.viewholder.** {
+-keep class com.martel.database.viewholder.** {
     *;
 }
 
--keepclassmembers class com.martel.models.** {
+-keepclassmembers class com.martel.database.models.** {
     *;
 }

@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1015969707431:android:215dc668ae42d320",
         "android_client_info": {
-          "package_name": "com.martel"
+          "package_name": "com.martel.database"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "1015969707431-ldr4t6rqd4l27sk0n4emf289l0fm882b.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.martel",
+            "package_name": "com.martel.database",
             "certificate_hash": "b105bd9c2a70f3dbc31b62fd799b508e69cba3de"
           }
         },
@@ -54,7 +54,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:1015969707431:android:afd34db95c8295d9",
         "android_client_info": {
-          "package_name": "com.martel.database"
+          "package_name": "com.martel.database.database"
         }
       },
       "oauth_client": [
@@ -62,7 +62,7 @@
           "client_id": "1015969707431-e8mlb0q73o2oqbih9apk3mn6chou0nsk.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.martel.database",
+            "package_name": "com.martel.database.database",
             "certificate_hash": "b105bd9c2a70f3dbc31b62fd799b508e69cba3de"
           }
         },

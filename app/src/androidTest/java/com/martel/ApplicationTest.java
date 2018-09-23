@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.martel;
+package com.martel.database;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
