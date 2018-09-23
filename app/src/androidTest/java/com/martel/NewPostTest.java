@@ -1,4 +1,4 @@
-package com.martel.database;
+package com.martel;
 
 
 import android.support.test.InstrumentationRegistry;
