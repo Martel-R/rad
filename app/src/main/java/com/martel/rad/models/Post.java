@@ -1,4 +1,4 @@
-package com.martel.models;
+package com.martel.rad.models;
 
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
@@ -65,9 +65,9 @@ public class Post {
         result.put("p30x40", p30x34);
         result.put("p35x35", p35x35);
         result.put("p35x43", p35x43);
-        result.put("Idade", idade);
-        result.put("Hora", hora);
-        result.put("Data", dataa);
+        result.put("idade", idade);
+        result.put("hora", hora);
+        result.put("data", dataa);
         result.put("starCount", starCount);
         result.put("stars", stars);
 

@@ -1,4 +1,4 @@
-package com.martel.fragment;
+package com.martel.rad.fragment;
 
 import android.content.Intent;
 import android.os.Build;
@@ -22,10 +22,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.MutableData;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.Transaction;
-import com.martel.PostDetailActivity;
-import com.martel.R;
-import com.martel.models.Post;
-import com.martel.viewholder.PostViewHolder;
+import com.martel.rad.PostDetailActivity;
+
+import com.martel.rad.R;
+import com.martel.rad.models.Post;
+import com.martel.rad.viewholder.PostViewHolder;
 
 import java.util.Objects;
 

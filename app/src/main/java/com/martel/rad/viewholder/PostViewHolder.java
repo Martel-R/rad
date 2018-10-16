@@ -1,4 +1,4 @@
-package com.martel.viewholder;
+package com.martel.rad.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -6,8 +6,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.martel.R;
-import com.martel.models.Post;
+
+import com.martel.rad.R;
+import com.martel.rad.models.Post;
 
 public class PostViewHolder extends RecyclerView.ViewHolder {
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.martel;
+package com.martel.rad;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

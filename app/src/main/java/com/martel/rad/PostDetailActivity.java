@@ -1,4 +1,4 @@
-package com.martel;
+package com.martel.rad;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -19,9 +19,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.martel.models.User;
-import com.martel.models.Comment;
-import com.martel.models.Post;
+
+import com.martel.rad.models.User;
+import com.martel.rad.models.Comment;
+import com.martel.rad.models.Post;
 
 import java.util.ArrayList;
 import java.util.List;

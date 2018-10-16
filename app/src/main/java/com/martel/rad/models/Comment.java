@@ -1,4 +1,4 @@
-package com.martel.models;
+package com.martel.rad.models;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 

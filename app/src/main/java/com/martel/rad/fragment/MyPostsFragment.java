@@ -1,4 +1,4 @@
-package com.martel.fragment;
+package com.martel.rad.fragment;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;

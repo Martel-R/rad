@@ -1,4 +1,4 @@
-package com.martel;
+package com.martel.rad;
 
 import android.content.Intent;
 import android.content.SharedPreferences;

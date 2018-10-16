@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.martel;
+package com.martel.rad;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,9 +27,10 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.martel.fragment.MyPostsFragment;
-import com.martel.fragment.MyTopPostsFragment;
-import com.martel.fragment.RecentPostsFragment;
+
+import com.martel.rad.fragment.MyPostsFragment;
+import com.martel.rad.fragment.MyTopPostsFragment;
+import com.martel.rad.fragment.RecentPostsFragment;
 
 public class  MainActivity extends BaseActivity {
 

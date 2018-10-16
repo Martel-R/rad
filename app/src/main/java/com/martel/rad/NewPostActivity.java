@@ -1,11 +1,17 @@
-package com.martel;
+package com.martel.rad;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,9 +22,12 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.martel.models.Post;
-import com.martel.models.User;
 
+import com.martel.rad.models.Post;
+import com.martel.rad.models.User;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,37 +38,28 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
 
     // [START declare_database_ref]
     private DatabaseReference mDatabase;
+    private AlertDialog peliculaDialog;
     // [END declare_database_ref]
 
     private EditText mNomeField;
-    private EditText mProcField;
-    private ImageView p13x18i;
-    private ImageView p13x18v;
-    private ImageView p18x24i;
-    private ImageView p18x24v;
-    private ImageView p24x30i;
-    private ImageView p24x30v;
-    private ImageView p30x40i;
-    private ImageView p30x40v;
-    private ImageView p35x35i;
-    private ImageView p35x35v;
-    private ImageView p35x43i;
-    private ImageView p35x43v;
+    private Button btnProc;
+    private TextView tvProc;
     private TextView tv13x18;
     private TextView tv18x24;
     private TextView tv24x30;
     private TextView tv30x40;
     private TextView tv35x35;
     private TextView tv35x43;
+    private Button btnPeliculas;
     private EditText mIdadeField;
     private EditText mDataField;
     private EditText mHoraField;
-     String ss13x18;
-     String ss18x24;
-     String ss24x30;
-     String ss30x40;
-     String ss35x35;
-     String ss35x43;
+    private String ss13x18;
+    private String ss18x24;
+    private  String ss24x30;
+    private  String ss30x40;
+    private  String ss35x35;
+    private  String ss35x43;
      int count1;
      int count2;
      int count3;
@@ -78,20 +78,22 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
         // [END initialize_database_ref]
 
         mNomeField = findViewById(R.id.field_nome);
-        mProcField = findViewById(R.id.field_proc);
+        btnProc = findViewById(R.id.btn_proc);
         mIdadeField = findViewById(R.id.field_idade);
-        p13x18i = findViewById(R.id.iv_mais1);
-        p13x18v = findViewById(R.id.iv_menos1);
-        p18x24i = findViewById(R.id.iv_mais2);
-        p18x24v = findViewById(R.id.iv_menos2);
-        p24x30i = findViewById(R.id.iv_mais3);
-        p24x30v = findViewById(R.id.iv_menos3);
-        p30x40i = findViewById(R.id.iv_mais4);
-        p30x40v = findViewById(R.id.iv_menos4);
-        p35x35i = findViewById(R.id.iv_mais5);
-        p35x35v = findViewById(R.id.iv_menos5);
-        p35x43i = findViewById(R.id.iv_mais6);
-        p35x43v = findViewById(R.id.iv_menos6);
+        btnPeliculas = findViewById(R.id.btn_peliculas);
+        findViewById(R.id.iv_mais1);
+        findViewById(R.id.iv_menos1);
+        findViewById(R.id.iv_mais2);
+        findViewById(R.id.iv_menos2);
+        findViewById(R.id.iv_mais3);
+        findViewById(R.id.iv_menos3);
+        findViewById(R.id.iv_mais4);
+        findViewById(R.id.iv_menos4);
+        findViewById(R.id.iv_mais5);
+        findViewById(R.id.iv_menos5);
+        findViewById(R.id.iv_mais6);
+        findViewById(R.id.iv_menos6);
+
         mDataField = findViewById(R.id.field_data);
         mHoraField = findViewById(R.id.field_hora);
         mSubmitButton = findViewById(R.id.fab_submit_post);
@@ -101,32 +103,13 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
         tv30x40 = findViewById(R.id.tx_30x40);
         tv35x35 = findViewById(R.id.tx_35x35);
         tv35x43 = findViewById(R.id.tx_35x43);
-
-        ss13x18 = tv13x18.getText().toString();
+        ss13x18 = tv13x18.getText();
         ss18x24 = tv18x24.getText().toString();
         ss24x30 = tv24x30.getText().toString();
         ss30x40 = tv30x40.getText().toString();
         ss35x35 = tv35x35.getText().toString();
         ss35x43 = tv35x43.getText().toString();
-        count1= Integer.parseInt(ss13x18);
-        count2= Integer.parseInt(ss18x24);
-        count3= Integer.parseInt(ss24x30);
-        count4= Integer.parseInt(ss30x40);
-        count5= Integer.parseInt(ss35x35);
-        count6= Integer.parseInt(ss35x43);
-
-        p13x18i.setOnClickListener(this);
-        p13x18v.setOnClickListener(this);
-        p18x24v.setOnClickListener(this);
-        p18x24i.setOnClickListener(this);
-        p24x30v.setOnClickListener(this);
-        p24x30i.setOnClickListener(this);
-        p30x40v.setOnClickListener(this);
-        p30x40i.setOnClickListener(this);
-        p35x35v.setOnClickListener(this);
-        p35x35i.setOnClickListener(this);
-        p35x43v.setOnClickListener(this);
-        p35x43i.setOnClickListener(this);
+        btnPeliculas.setOnClickListener(this);
 
 
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
@@ -139,7 +122,7 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
 
     private void submitPost() {
         final String nome = mNomeField.getText().toString();
-        final String proc = mProcField.getText().toString();
+        final String proc = tvProc.getText().toString();
         final String idade = mIdadeField.getText().toString();
         final String s13x18 = tv13x18.getText().toString();
         final String s18x24 = tv18x24.getText().toString();
@@ -158,7 +141,7 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
 
         // Body is required
         if (TextUtils.isEmpty(proc)) {
-            mProcField.setError(REQUIRED);
+            tvProc.setError(REQUIRED);
             return;
         }
 
@@ -222,11 +205,10 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
 
     private void setEditingEnabled(boolean enabled) {
         mNomeField.setEnabled(enabled);
-        mProcField.setEnabled(enabled);
         if (enabled) {
             mSubmitButton.setVisibility(View.VISIBLE);
         } {
-            mSubmitButton.setVisibility(View.GONE);
+            mSubmitButton.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -248,8 +230,15 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
     @Override
     public void onClick(View view) {
         int i = view.getId();
+
+        count1 = Integer.parseInt(ss13x18);
+        count2 = Integer.parseInt(ss18x24);
+        count3 = Integer.parseInt(ss24x30);
+        count4 = Integer.parseInt(ss30x40);
+        count5 = Integer.parseInt(ss35x35);
+        count6 = Integer.parseInt(ss35x43);
         if (i == R.id.iv_mais1) {
-//            // int a = Integer.parseInt(ss13x18);
+//            int a = Integer.parseInt(ss13x18);
              ++count1;
             atualizaContador(count1, tv13x18);
         } if (i == R.id.iv_menos1) {
@@ -306,11 +295,41 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
             --count6;
             atualizaContador(count6, tv35x43);
 
+        } if (i == R.id.btn_peliculas) {
+            exemplo_layout();
+
         }
 
     }
+
+    private void exemplo_layout() {
+        //LayoutInflater é utilizado para inflar nosso layout em uma view.
+        //-pegamos nossa instancia da classe
+        LayoutInflater li = getLayoutInflater();
+
+        //inflamos o layout peliculaDialog.xml na view
+        View view = li.inflate(R.layout.dialog_pelicula, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Películas");
+        //definimos para o botão do layout um clickListener
+        builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                InputStreamReader ir = new InputStreamReader(System.in);
+                BufferedReader in = new BufferedReader(ir);
+
+            }
+        });
+        builder.setView(view);
+        peliculaDialog = builder.create();
+        peliculaDialog.show();
+    }
+
     private void atualizaContador(int a, TextView tv) {
-        tv.setText(String.valueOf(a));
+        tv.setText(a);
     }
     // [END write_fan_out]
 }
