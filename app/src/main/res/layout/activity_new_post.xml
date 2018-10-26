@@ -39,10 +39,10 @@
             android:id="@+id/btn_peliculas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/btn_custom_black"
             android:text="Películas" />
         <TextView
@@ -56,16 +56,6 @@
             android:text="Películas:"/>
 
 
-        <Button
-            android:id="@+id/btn_proc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/btn_custom_black"
-            android:text="Procedimento" />
         <TextView
             android:id="@+id/tv_proc"
             android:layout_width="match_parent"
@@ -75,6 +65,35 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="5dp"
             android:text="Procedimentos:"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_listaproc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/btn_custom_black"
+                android:text="Lista" />
+
+            <Button
+                android:id="@+id/btn_proc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/btn_custom_black"
+                android:text="Pesquisar" />
+        </LinearLayout>
 
         <EditText
             android:id="@+id/field_data"

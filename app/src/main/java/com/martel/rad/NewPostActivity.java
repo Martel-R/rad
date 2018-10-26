@@ -43,6 +43,7 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
 
     private EditText mNomeField;
     private Button btnProc;
+    private Button btnListaProc;
     private TextView tvProc;
     private TextView tv13x18;
     private TextView tv18x24;
@@ -56,10 +57,10 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
     private EditText mHoraField;
     private String ss13x18;
     private String ss18x24;
-    private  String ss24x30;
-    private  String ss30x40;
-    private  String ss35x35;
-    private  String ss35x43;
+    private String ss24x30;
+    private String ss30x40;
+    private String ss35x35;
+    private String ss35x43;
      int count1;
      int count2;
      int count3;
@@ -79,6 +80,7 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
 
         mNomeField = findViewById(R.id.field_nome);
         btnProc = findViewById(R.id.btn_proc);
+        btnListaProc = findViewById(R.id.btn_listaproc);
         mIdadeField = findViewById(R.id.field_idade);
         btnPeliculas = findViewById(R.id.btn_peliculas);
         findViewById(R.id.iv_mais1);
@@ -103,13 +105,15 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
         tv30x40 = findViewById(R.id.tx_30x40);
         tv35x35 = findViewById(R.id.tx_35x35);
         tv35x43 = findViewById(R.id.tx_35x43);
-        ss13x18 = tv13x18.getText();
+        ss13x18 = (String) tv13x18.getText();
         ss18x24 = tv18x24.getText().toString();
         ss24x30 = tv24x30.getText().toString();
         ss30x40 = tv30x40.getText().toString();
         ss35x35 = tv35x35.getText().toString();
         ss35x43 = tv35x43.getText().toString();
         btnPeliculas.setOnClickListener(this);
+        btnProc.setOnClickListener(this);
+        btnListaProc.setOnClickListener(this);
 
 
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
@@ -296,7 +300,7 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
             atualizaContador(count6, tv35x43);
 
         } if (i == R.id.btn_peliculas) {
-            exemplo_layout();
+            startActivity(new Intent(NewPostActivity.this, ProcedimentoActivity.class));
 
         }
 

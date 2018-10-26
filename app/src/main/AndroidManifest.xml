@@ -13,7 +13,8 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme" />
         <activity android:name=".NewPostActivity" />
-        <activity android:name=".SignInActivity"
+        <activity
+            android:name=".SignInActivity"
             android:theme="@style/AppTheme.TelaCheia">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,6 +49,10 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ProcedimentoActivity"
+            android:label="@string/title_activity_procedimento"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -16,4 +16,5 @@
     <string name="heading_recent">Recentes</string>
     <string name="heading_my_posts">Meus Registros</string>
     <string name="heading_my_top_posts">Meus registros favoritados</string>
+    <string name="title_activity_procedimento">ProcedimentoActivity</string>
 </resources>
